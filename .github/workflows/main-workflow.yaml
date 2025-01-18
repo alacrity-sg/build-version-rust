@@ -1,0 +1,44 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    name: Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+          cargo fetch
+      - name: Test
+        run: cargo test
+  build:
+    runs-on: ubuntu-24.04
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+          cargo fetch
+  publish:
+    runs-on: ubuntu-24.04
+    name: Publish
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+          cargo fetch
+      - name: Publish
+        run: echo "to be implemented"
