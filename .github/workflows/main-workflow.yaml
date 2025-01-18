@@ -50,4 +50,4 @@ jobs:
         run: cargo publish --allow-dirty --dry-run
       - name: Publish
         if: github.event_name == 'push' && github.ref_name == 'main'
-        run: cargo publish --allow-dirt --token "${{ secrets.CARGO_TOKEN }}"
+        run: cargo publish --allow-dirty --token "${{ secrets.CARGO_TOKEN }}"
