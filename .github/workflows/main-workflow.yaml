@@ -32,6 +32,7 @@ jobs:
         with:
           name: build-artifact
           path: target/release
+          retention-days: 7
   publish:
     runs-on: ubuntu-24.04
     name: Publish
