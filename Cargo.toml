@@ -7,3 +7,5 @@ license = "MIT"
 homepage = "https://github.com/alacrity-sg/build-version-rust"
 repository = "https://github.com/alacrity-sg/build-version-rust.git"
 [dependencies]
+git2 = "0.20.0"
+semver = "1.0.24"
