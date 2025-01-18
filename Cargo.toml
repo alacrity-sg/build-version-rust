@@ -1,5 +1,5 @@
 [package]
-name = "build_version"
+name = "alacrity-build-version"
 version = "0.1.0"
 edition = "2021"
 description = "Build Version tool to generate unique version number using industry compliant standards such as SemVer, CalVer and more."
